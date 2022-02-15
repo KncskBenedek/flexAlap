@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+header, footer, article, aside, main, section, nav{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+article header{
+    background-color: red;
+}
+
+article{
+    background-color: gray;
+    color: white;
+}
+
+section{
+    display: flex;
+   /*flex-wrap: wrap;
+    flex-direction: row-reverse;
+    */
+    flex-flow:row wrap;
+    /*flex-direction: column;*/
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+section article{
+    /*flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;*/
+    flex: 1 1 200px;
+}
+
+section article:nth-child(1){
+    order: 5;
+
+}
+section article:nth-child(2){
+    order: 6;
+}
+
+/*Meü kalakytása*/
+nav a{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: red;
+    border-left: 1px solid gray;
+}
+#listaval ul{
+    padding: 0;
+    list-style-type: none;
+
+}
+
+#listaval, #divekkel{
+    display: flex;
+    justify-content: space-between;
+}
+#listaval  #menu{
+    display: flex;
+}
+
+#home{
+    background-color: red;
+}
+
+#home a{
+    color: white;
+}
+
+nav a:hover{
+    background-color: green;
+}
+
+@media screen and (max-width: 700px){
+
+    section{
+        flex-direction: column;
+    }
+}
+/*
+
+*/
